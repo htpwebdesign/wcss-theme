@@ -20,17 +20,27 @@ input[type="submit"] {
 	}
 }
 
+// Home Page Buttons (Add to Cart, Select Options)
+.wp-block-button, 
+.wc-block-grid__product-add-to-cart {
+	height: 30px;
+}
+
 .wp-block-button__link {
 	border-radius: 0px;
 	color: #ffffff;
 	background-color: $color_black;
-	border: 1px solid $color_black;
+	border: 2px solid $color_black;
   
 	&:hover {
 	  color: #ffffff; /* Change text color on hover */
 	  background-color: $color_dark_green; /* Change background color on hover */
-	  border: 1px solid $color_dark_green;
+	  border: 2px solid $color_black;
 	  transition: all 0.3s ease-in; /* Smooth transition for the hover effect */
+	}
+
+	&:visited {
+		color: #ffffff;
 	}
   
 	&:focus {
@@ -38,4 +48,5 @@ input[type="submit"] {
 	  outline-offset: 4px; /* Space between the outline and the button */
 	}
   }
+  
   
