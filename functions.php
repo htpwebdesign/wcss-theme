@@ -304,3 +304,13 @@ function wcss_login_title_title() {
 }
 add_filter( 'login_headertext', 'wcss_login_title_title' );
 ?>
+
+<?php
+// Remove admin menu links for non-Administrator accounts
+function fwd_remove_admin_links() {
+	if ( !current_user_can( 'manage_options' ) ) {
+		remove_menu_page( 'edit.php' );           // Remove Posts link
+		remove_menu_page( 'edit-comments.php' );  // Remove Comments link
+	}
+}
+add_action( 'admin_menu', 'fwd_remove_admin_links' );
